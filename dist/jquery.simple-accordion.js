@@ -1,4 +1,4 @@
-/*! simple-accordion - v1.0.0 - 2013-08-19
+/*! simple-accordion - v1.0.1 - 2013-08-19
 * https://github.com/asotog88/jquery-simple-accordion
 * Copyright (c) 2013 Alejandro Soto; Licensed y */
 (function ($) {
