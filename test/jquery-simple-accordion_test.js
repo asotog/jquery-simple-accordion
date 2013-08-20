@@ -1,5 +1,5 @@
-(function($) {
-  /*
+(function ($) {
+    /*
     ======== A Handy Little QUnit Reference ========
     http://api.qunitjs.com/
 
@@ -20,43 +20,36 @@
       throws(block, [expected], [message])
   */
 
-  module('jQuery#awesome', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+    module('jQuery#jquerySimpleAccordion', {
+        // This will run before each test in this module.
+        setup: function () {
+            this.elems = $('#qunit-fixture').children();
+        }
+    });
 
-  test('is chainable', function() {
-    expect(1);
-    // Not a bad test to run on collection methods.
-    strictEqual(this.elems.awesome(), this.elems, 'should be chainable');
-  });
+    test('is jquerySimpleAccordion', function () {
+        expect(1);
+        strictEqual(this.elems.jquerySimpleAccordion().text(), '123', 'should be the same');
+    });
 
-  test('is awesome', function() {
-    expect(1);
-    strictEqual(this.elems.awesome().text(), 'awesome0awesome1awesome2', 'should be awesome');
-  });
+    module('jQuery.jquerySimpleAccordion');
 
-  module('jQuery.awesome');
+    module(':awesome selector', {
+        // This will run before each test in this module.
+        setup: function () {
+            this.elems = $('#qunit-fixture').children();
+        }
+    });
 
-  test('is awesome', function() {
-    expect(2);
-    strictEqual($.awesome(), 'awesome.', 'should be awesome');
-    strictEqual($.awesome({punctuation: '!'}), 'awesome!', 'should be thoroughly awesome');
-  });
+}(jQuery));
 
-  module(':awesome selector', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+(function ($) {
 
-  test('is awesome', function() {
-    expect(1);
-    // Use deepEqual & .get() when comparing jQuery objects.
-    deepEqual(this.elems.filter(':awesome').get(), this.elems.last().get(), 'knows awesome when it sees it');
-  });
+    $(document).ready(function () {
+        $('.normal-mode').jquerySimpleAccordion();
+        
+        $('.custom-mode').jquerySimpleAccordion({toggleButtonSelector: 'label', itemContainerSelector: 'div'});
+    });
+
 
 }(jQuery));

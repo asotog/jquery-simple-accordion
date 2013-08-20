@@ -8,17 +8,26 @@
 
 (function ($) {
 
-  // Static method.
-  $.fn.jquerySimpleAccordion = function (options) {
-    // Override default options with passed-in options.
-    options = $.extend({}, $.awesome.options, options);
-    // Return something awesome.
-    return $(this);
-  };
+    // Static method.
+    $.fn.jquerySimpleAccordion = function (options) {
+        // Override default options with passed-in options.
+        options = $.extend({}, $.fn.jquerySimpleAccordion.options, options);
+        if (options.mode == 'normal') {
+            $(this).find(options.toggleButtonSelector).click(function (e) {
+                e.preventDefault();
+                $(this).parent().find(options.itemContainerSelector).slideToggle();
+                console.info('clicked');
+            });
+        }
+        // Return something awesome.
+        return $(this);
+    };
 
-  // Static method default options.
-  $.awesome.options = {
-    punctuation: '.'
-  };
+    // Static method default options.
+    $.fn.jquerySimpleAccordion.options = {
+        mode: 'normal',
+        toggleButtonSelector: 'li > a',
+        itemContainerSelector: '> div'
+    };
 
 }(jQuery));

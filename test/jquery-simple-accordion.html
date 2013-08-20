@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>jquery-simple-accordion Test Suite</title>
-  <!-- Load local jQuery. -->
-  <script src="../bower_components/jquery/jquery.js"></script>
-  <!-- Load local QUnit. -->
-  <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" media="screen">
-  <script src="../bower_components/qunit/qunit/qunit.js"></script>
-  <!-- Load local lib and tests. -->
-  <script src="../src/jquery-simple-accordion.js"></script>
-  <script src="jquery-simple-accordion_test.js"></script>
-  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
-       you REALLY want to mess around with jQuery in the console. REMEMBER WE
-       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
-  <script>window._$ = jQuery.noConflict(true);</script>
-</head>
-<body>
-  <div id="qunit"></div>
-  <div id="qunit-fixture">
-    <span>lame test markup</span>
-    <span>normal test markup</span>
-    <span>awesome test markup</span>
-  </div>
-</body>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>jquery-simple-accordion Test Suite</title>
+        <!-- Load local jQuery. -->
+        <script src="../bower_components/jquery/jquery.js"></script>
+        <!-- Load local QUnit. -->
+        <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" media="screen">
+        <script src="../bower_components/qunit/qunit/qunit.js"></script>
+        <!-- Load local lib and tests. -->
+        <script src="../src/simple-accordion.js"></script>
+        <script src="jquery-simple-accordion_test.js"></script>
+        <!-- Removing access to jQuery and $. But it'll still be available as _$, if you REALLY want to mess around with jQuery in the console. REMEMBER WE ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+        <script>
+            window._$ = jQuery.noConflict(true);
+        </script>
+    </head>
+    
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+        <ul class="normal-mode">
+            <li>
+                <a href="#">Item 1</a>
+                <div>Augue cursus ridiculus, magnis. Sit sed natoque? Vel tempor lectus a elementum, eu scelerisque? Odio ac ultricies pid. Nascetur ac turpis ac pulvinar eu tempor non ut aliquam adipiscing magna, mauris</div>
+            </li>
+            <li>
+                <a href="#">Item 2</a>
+                <div>Augue cursus ridiculus, magnis. Sit sed natoque? Vel tempor lectus a elementum, eu scelerisque? Odio ac ultricies pid. Nascetur ac turpis ac pulvinar eu tempor non ut aliquam adipiscing magna, mauris</div>
+            </li>
+            <li>
+                <a href="#">Item 3</a>
+                <div>Augue cursus ridiculus, magnis. Sit sed natoque? Vel tempor lectus a elementum, eu scelerisque? Odio ac ultricies pid. Nascetur ac turpis ac pulvinar eu tempor non ut aliquam adipiscing magna, mauris</div>
+            </li>
+        </ul>
+        <div class="custom-mode">
+            <div>
+                <label>Item1</label>
+                <div>
+                    Sit urna mattis augue nec amet? Egestas tincidunt dapibus! Eu penatibus magnis! Dignissim odio ultricies aliquet vel, nunc. A egestas, lundium, velit scelerisque magnis, lectus lundium! Risus? 
+                </div>
+            </div>
+            <div>
+                <label>Item2</label>
+                <div>
+                    Sit urna mattis augue nec amet? Egestas tincidunt dapibus! Eu penatibus magnis! Dignissim odio ultricies aliquet vel, nunc. A egestas, lundium, velit scelerisque magnis, lectus lundium! Risus? 
+                </div>
+            </div>
+        </div>
+    </body>
+
 </html>
