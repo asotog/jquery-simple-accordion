@@ -6,8 +6,8 @@ Simple accordion plugin
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/asotog88/jquery-jquery-simple-accordion/master/dist/jquery.simple-accordion.min.js
-[max]: https://raw.github.com/asotog88/jquery-jquery-simple-accordion/master/dist/jquery.simple-accordion.js
+[min]: https://raw.github.com/asotog88/jquery-simple-accordion/master/dist/jquery.simple-accordion.min.js
+[max]: https://raw.github.com/asotog88/jquery-simple-accordion/master/dist/jquery.simple-accordion.js
 
 In your web page:
 
